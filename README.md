@@ -34,6 +34,8 @@ vitpose_pipeline/
 ├── tests/
 │   └── pipeline_test.py    # Pipeline testi
 │   └── estimator_test.py   # Estimator testi
+│   └── config_test.py   # Estimator testi
+│   └── hf_detector_test.py   # Estimator testi
 └── outputs/                # Video ve CSV çıktıları
 ```
 
