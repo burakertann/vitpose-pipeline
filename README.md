@@ -1,12 +1,12 @@
 # 🕺 ViTPose Pipeline
 
-Bu proje, **Hugging Face tabanlı bir ViTPose modelini** kullanarak videolardan insan pozu (2D keypoint) tespiti yapmanızı sağlar. Algılanan pozlar hem görselleştirilir hem de `.csv` formatında kaydedilir. 
+Bu proje, **Hugging Face tabanlı bir ViTPose ve VitPose-Plus modellerini** kullanarak videolardan insan pozu (2D keypoint) tespiti yapmanızı sağlar. Algılanan pozlar hem görselleştirilir hem de `.csv` formatında kaydedilir. Gereken ayarlamalar 'config.py' ile sağlanır.
 
 ## 🚀 Özellikler
 - Hugging Face'den direkt model ve detektör desteği
 - COCO keypoint formatında poz tahmini
 - Her kare için CSV çıktısı
-- Video çıktısı kaydı (isteğe bağlı)
+- Video çıktısı kaydı
 - Kolayca genişletilebilir modüler yapı
 
 ## 🛠️ Kurulum
@@ -34,8 +34,8 @@ vitpose_pipeline/
 ├── tests/
 │   └── pipeline_test.py    # Pipeline testi
 │   └── estimator_test.py   # Estimator testi
-│   └── config_test.py   # Estimator testi
-│   └── hf_detector_test.py   # Estimator testi
+│   └── config_test.py   # Config testi
+│   └── hf_detector_test.py   # Hugging Face tabanlı detector testi
 └── outputs/                # Video ve CSV çıktıları
 ```
 
@@ -71,12 +71,6 @@ frame,person_id,keypoint_name,x,y
 0,0,left_eye,120.0,240.2
 ...
 ```
-
-## 📦 Model & Detektör
-
-- Pose Estimator: `usyd-community/vitpose-base-simple`
-- Detector: `PekingU/rtdetr_r50vd_coco_o365`
-
 ## 📄 Lisans
 
 [Apache 2.0](LICENSE)
